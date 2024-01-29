@@ -1,4 +1,4 @@
-<project name="NewPackageIvy" default="Compile Sources" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="OpenXES" default="Compile Sources" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 	<!-- set global properties for this build -->
 	<property environment="env" />
 	<property name="src" location="src" />
@@ -8,11 +8,11 @@
 	<property name="dist" location="dist" />
 	<property name="release" location="latestrelease" />
 	<property name="version" value="${env.major_minor}.${env.GITHUB_RUN_NUMBER}" />
-	<property name="project" value="NewPackageIvy" />
+	<property name="project" value="OpenXES" />
 
 	<property name="author" value="H.M.W. Verbeek" />
 	<property name="organization" value="Eindhoven University of Technology" />
-	<property name="description" value="New Package with Ivy" />
+	<property name="description" value="OpenXES" />
 	<!-- See https://svn.win.tue.nl/trac/prom/browser/Packages/ProM-Contexts/Trunk/src/org/processmining/contexts/uitopia/packagemanager/PMPackageView.java for a list of known licenses. -->
 	<property name="license" value="GPL" />
 	<property name="logo" value="prom_subtitle_hat_300.png" />
@@ -121,7 +121,7 @@
 	</target>
 	
 	<target name="resolve" depends="init-ivy">
-		<ivy:retrieve type="jar,bundle" sync="true" />
+		<ivy:retrieve type="jar,bundle" sync="true" haltonfailure="false" />
 		<!--ivy:retrieve pattern="lib/[artifact]-[revision].[ext]" conf="lib" type="jar,bundle" sync="true" /-->
 	</target>
 

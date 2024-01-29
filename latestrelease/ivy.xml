@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-    <info organisation="prom" module="NewPackageIvy" revision="latest">
+    <info organisation="prom" module="OpenXES" revision="latest">
     	<description>
     		Version 6.14.4
     	</description>
@@ -15,13 +15,14 @@
     	<dependency org="prom" name="ProM-Plugins" rev="latest" changing="true" transitive="true" />
     	<!-- ProM packages. -->
     	<dependency org="prom" name="BasicUtils" rev="latest" changing="true" transitive="true" />
-    	<dependency org="prom" name="Widgets" rev="latest" changing="true" transitive="true" />
+    	<dependency org="prom" name="ApacheUtils" rev="latest" changing="true" transitive="true" />
     	<!-- Third party libraries. These may span multiple lines. -->
     	<!-- Please uncomment the second line in the resolve target in your build.xml file
     	     if you have any third party libraries. -->
  		<!-- Third party library downloaded from maven repository. -->
     	<!-- dependency conf="lib->default" org="org.reflections" name="reflections" rev="0.9.10" /-->
     	<!-- Third party library downloaded from ProM library. -->
-    	<!-- dependency conf="lib->default" org="prom-libs" name="opencsv" rev="2.4-patched" transitive="false" /--> 
+    	<dependency conf="lib->default" org="prom-libs" name="Spex" rev="1.1" transitive="false" /> 
+    	<dependency conf="lib->default" org="prom-libs" name="guava" rev="16.0.1" transitive="false" /> 
     </dependencies>
 </ivy-module>
