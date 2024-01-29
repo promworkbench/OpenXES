@@ -122,7 +122,7 @@
 	
 	<target name="resolve" depends="init-ivy">
 		<ivy:retrieve type="jar,bundle" sync="true" haltonfailure="false" />
-		<!--ivy:retrieve pattern="lib/[artifact]-[revision].[ext]" conf="lib" type="jar,bundle" sync="true" /-->
+		<ivy:retrieve pattern="lib/[artifact]-[revision].[ext]" conf="lib" type="jar,bundle" sync="true" />
 	</target>
 
 	<target name="javadoc">
