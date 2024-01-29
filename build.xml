@@ -155,9 +155,9 @@
 				<fileset dir="${release}" includes="${project}-*-${os}.zip" />
 			</delete>
 			<zip destfile="${release}/${project}-${version}-${os}.zip">
-				<!--zipfileset dir="${lib}" prefix="lib">
+				<zipfileset dir="${lib}" prefix="lib">
 					<include name="**" />
-				</zipfileset-->
+				</zipfileset>
 				<zipfileset dir="${dist}" prefix="">
 					<include name="${project}.jar" />
 				</zipfileset>
